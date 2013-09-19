@@ -72,6 +72,7 @@ $(document).ready(function(){
 
   var host = window.location.host.split(':')[0];
   var socket = io.connect('http://' + host);
+  var socket = io.connect(window.location.hostname);
   globalSocket = socket;
   
 
