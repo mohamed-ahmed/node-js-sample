@@ -11,7 +11,7 @@ var globalSocket;
 var index_end;
 var index_start;
 
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
 var url;
 
 /*Here we handle the routes*/
