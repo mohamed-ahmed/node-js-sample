@@ -16,6 +16,7 @@ app.listen(process.env.PORT || 5000);
 var url;
 
 io.configure(function () { 
+  console.log("configuring socket.io");
   io.set("transports", ["xhr-polling"]); 
   io.set("polling duration", 10); 
 });
