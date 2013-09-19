@@ -1,14 +1,12 @@
 var app = require('http').createServer(handler),
 	io = require('socket.io').listen(app),
-	fs = require('fs'),
-	redis = require('redis');
+	fs = require('fs');
 
 var MongoClient = require('mongodb').MongoClient
 
 var globalSocket;
 
 
-var redis_client;
 
 var index_end;
 var index_start;
