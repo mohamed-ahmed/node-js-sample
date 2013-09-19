@@ -13,7 +13,7 @@ var index_start;
 
 app.listen(process.env.PORT || 5000);
 var url;
-//
+
 /*Here we handle the routes*/
 
 function handler(req, res) {
