@@ -1,9 +1,8 @@
 var app = require('http').createServer(handler),
-	io = require('socket.io').listen(app),
+	sio = require('socket.io'),
 	fs = require('fs');
 
-io.set('transports', ['xhr-polling']);
-io.set('polling duration', 10);
+
 
 var MongoClient = require('mongodb').MongoClient
 
@@ -18,7 +17,10 @@ var index_start;
 app.listen(process.env.PORT || 5000);
 var url;
 
+var io = sio.listen(app);
 
+io.set('transports', ['xhr-polling']);
+io.set('polling duration', 10);
 
 /*Here we handle the routes*/
 
