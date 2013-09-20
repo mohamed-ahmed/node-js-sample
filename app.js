@@ -2,11 +2,8 @@ var app = require('http').createServer(handler),
 	io = require('socket.io').listen(app),
 	fs = require('fs');
 
-io.configure(function () { 
-  console.log("configuring socket.io");
-  io.set("transports", ["xhr-polling"]); 
-  io.set("polling duration", 10); 
-});
+io.set('transports', ['xhr-polling']);
+io.set('polling duration', 10);
 
 var MongoClient = require('mongodb').MongoClient
 
