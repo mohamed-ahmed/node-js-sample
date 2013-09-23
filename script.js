@@ -71,6 +71,11 @@ $(document).ready(function(){
   $("#desc").focus();
 
   var host = window.location.host.split(':')[0];
+
+
+  io.set('transports', ['xhr-polling']);
+  io.set('polling duration', 10);
+
   var socket = io.connect(window.location.hostname);
 
   io.set('transports', ['xhr-polling']);
