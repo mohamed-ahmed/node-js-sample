@@ -73,8 +73,8 @@ $(document).ready(function(){
   var host = window.location.host.split(':')[0];
 
 
-  io.set('transports', ['xhr-polling']);
-  io.set('polling duration', 10);
+  //io.set('transports', ['xhr-polling']);
+  //io.set('polling duration', 10);
 
   var socket = io.connect(window.location.hostname);
 
